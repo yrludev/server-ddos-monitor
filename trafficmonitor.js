@@ -9,6 +9,7 @@ const webhook_url = data.webhook_url;
 const mbit_threshold = Number(data.mbit_threshold || 0);
 const cooldown = Number(data.cooldown || 60) * 1000;
 const iface = data.interface || 'eth0';
+const servername = data.servername || '45.41.***.** [New York]';
 
 function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 
@@ -44,12 +45,12 @@ function formatSize(B) {
 
 async function sendWebhook(attacksize, pps, pcapname) {
   if (!webhook_url) return console.warn('No webhook_url configured');
-  const embed = {
+    const embed = {
     title: 'Attack Detected',
     description: 'Attack Is Being Mitigated!',
     color: 242424,
     fields: [
-      { name: 'Server Identity', value: '`45.41.***.**` [New York]', inline: false },
+      { name: 'Server Identity', value: servername, inline: false },
       { name: 'Dump Result', value: pcapname, inline: false },
       { name: 'Attack Size', value: attacksize, inline: false },
       { name: 'Peak Packets Per Second', value: String(pps), inline: false }
