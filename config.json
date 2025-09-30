@@ -1,0 +1,7 @@
+{
+    "interface" : "eth0",
+    "servername" : "Rain Vpn",
+    "webhook_url" : "https://discord.com/api/webhooks/1001482037934424064/rH9I18Msyx9XCd8MVT6TaX0HHa4GdGHkun8DIKGhvRKyFZW5MPFvsDiia2ecvp44HGne",
+    "mbit_threshold" : "20",
+    "cooldown" : "60"
+}

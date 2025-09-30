@@ -1,0 +1,15 @@
+{
+  "name": "server-ddos-monitor",
+  "version": "1.0.0",
+  "description": "Simple traffic monitor that alerts to Discord and captures pcap when incoming traffic exceeds a threshold",
+  "main": "trafficmonitor.js",
+  "scripts": {
+    "start": "node trafficmonitor.js"
+  },
+  "dependencies": {
+    "axios": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}
